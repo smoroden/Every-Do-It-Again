@@ -7,8 +7,11 @@
 //
 
 #import "AddToDoViewController.h"
+#import "CoreDataStack.h"
 
 @interface AddToDoViewController ()
+
+@property (nonatomic) CoreDataStack *stack;
 
 @end
 
@@ -17,11 +20,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(addToDoAndDismiss:)];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)addToDoAndDismiss:(UIButton *)sender {
+    // add ToDo
+    
+    
+    //dismiss
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void)setUpStack:(CoreDataStack*)stack {
+    if (_stack != stack) {
+        _stack = stack;
+    }
+    
 }
 
 /*

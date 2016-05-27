@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class CoreDataStack;
+
 @interface AddToDoViewController : UIViewController
+
+-(void)setUpStack:(CoreDataStack*)stack;
 
 @end

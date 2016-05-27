@@ -59,6 +59,24 @@
             </objects>
             <point key="canvasLocation" x="1455" y="-630"/>
         </scene>
+        <!--Add To Do View Controller-->
+        <scene sceneID="sv4-7K-z2t">
+            <objects>
+                <viewController id="BmV-uN-5al" customClass="AddToDoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bVL-Vb-xAG"/>
+                        <viewControllerLayoutGuide type="bottom" id="BFZ-fU-V6c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iYd-uk-7q5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TsM-3a-j8D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="709" y="-1299"/>
+        </scene>
         <!--Master-->
         <scene sceneID="smW-Zh-WAh">
             <objects>
@@ -120,7 +138,13 @@
                             <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8"/>
+                    <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="pEd-UN-BGI">
+                            <connections>
+                                <segue destination="BmV-uN-5al" kind="show" identifier="addToDoSegue" id="YNe-rR-Ep5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
